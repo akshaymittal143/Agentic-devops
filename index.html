@@ -553,6 +553,9 @@
                 <div style="margin-top: 2rem; font-size: 0.8em; color: #94a3b8;">
                     <p>From Human-Dependent Operations to Autonomous Intelligence</p>
                 </div>
+                <aside class="notes">
+                    Good afternoon, everyone. I'm Akshay Mittal, a Software Engineer and PhD researcher. Before we begin, I want to be clear: everything I'm sharing today is my personal research and professional interests. This presentation is not affiliated with or endorsed by PayPal or any other organization. [Pause.] Now—how many 2 AM production incidents has your team had this quarter? Raise your hand if you've ever had an incident that kept you up past midnight. [Pause.] Keep your hand up if that incident could have been prevented with better automation. [Pause.] Today I'll show you how we're moving beyond automation to something far more powerful: autonomous intelligence that can think, reason, and act like your best senior engineer—but never sleeps.
+                </aside>
             </section>
 
             <!-- Slide 2: The Hook -->
@@ -561,7 +564,9 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-number">$44.5B</div>
-                        <p style="font-size: 0.8rem;">Projected cloud infrastructure waste in 2025 <span style="color: #94a3b8;">(Flexera, 2025)</span></p>
+                        <p style="font-size: 0.8rem;">Projected cloud infrastructure waste in 2025 <span style="color: #94a3b8;">(Flexera / industry, 2025)</span></p>
+                        <p style="font-size: 0.65rem; color: #94a3b8; margin-top: 0.3rem;">Flexera 2025: 27% of cloud spend wasted; global spend → $840B+ by 2026</p>
+                        <p style="font-size: 0.6rem; color: #94a3b8; margin-top: 0.2rem;">Orgs exceed budgets by 17% while planning 28% spend growth</p>
                     </div>
                     <div>
                         <h3>The Real Crisis</h3>
@@ -587,6 +592,9 @@
                 </div>
                 
                 <div style="margin-top: 2rem; height: 1rem;"></div>
+                <aside class="notes">
+                    Let me start with a big number: forty-four point five billion dollars. That's how much companies will waste on cloud this year. But the real issue isn't just the money—it's that cloud systems are now too complex for people to manage on their own. Raise your hand if your team manages more than a hundred distinct cloud services. [Pause.] Now keep your hand up if you've had a production incident in the last thirty days that took more than two hours to resolve. [Pause.] Those of you with your hands still up—you're experiencing exactly what I'm about to explain. The waste isn't just financial; it's the cognitive load crushing our teams. Emphasize: ninety-two percent operate multi-cloud; the average is twelve ninety-five distinct services; forty-seven percent cite manual approvals as blockers; and a hundred percent report revenue loss from outages. The reality is that modern cloud environments generate more operational signals than any human team can process. The bottleneck isn't our tools—it's our cognitive capacity. So here's what's really happening: we've automated the doing, but not the thinking.
+                </aside>
             </section>
 
             <!-- Slide 3: The Cognitive Overload Challenge -->
@@ -603,7 +611,7 @@
                     <div style="flex: 1; text-align: left; overflow-y: auto;">
                         <div style="margin-bottom: 0.8rem; padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
                             <h3 style="font-size: 0.7em; margin-bottom: 0.2rem;">The bottleneck has moved from execution to cognition</h3>
-                            <p style="color: #94a3b8; font-size: 0.6em; margin: 0;">(Sweller et al., 2025)</p>
+                            <p style="color: #94a3b8; font-size: 0.6em; margin: 0;">(Cognitive load theory; e.g. Sweller; applied to DevOps)</p>
                         </div>
                         
                         <div style="margin-bottom: 0.8rem;">
@@ -632,6 +640,9 @@
                         </div>
                     </div>
                 </div>
+                <aside class="notes">
+                    The narrative of cloud adoption has been overwhelmingly successful—we've achieved unprecedented agility and cost-efficiency. But that success has created a new class of problems that traditional automation can't solve. Look at the diagram: human cognitive capacity grows linearly, while cloud complexity grows exponentially. That gap is where bottlenecks, manual firefighting, and revenue loss live. The bottleneck has moved. It's no longer about execution speed—it's about cognitive load. We have more signals than we can process, more decisions than we can make. How do we scale operational intelligence without scaling our headcount linearly? That's the core challenge of modern DevOps. Take ten seconds and count how many monitoring tools your team uses every day. [Pause.] That's cognitive overload in action. [Point to diagram.] The solution isn't more humans—it's AI agents that can process unlimited scale. This brings us to the most important shift in IT operations in a decade.
+                </aside>
             </section>
 
             <!-- Slide 4: The Paradigm Shift -->
@@ -671,11 +682,16 @@
                                 <p style="font-size: 0.55em; margin: 0.1rem 0 0 0;"><strong>Human is the supervisor</strong></p>
                             </div>
                         </div>
-                        
+                        <div style="margin-top: 0.4rem; padding: 0.3rem; background: rgba(59, 130, 246, 0.1); border-radius: 4px;">
+                            <p style="font-size: 0.55em; margin: 0;"><strong>Adoption:</strong> ~50% of agentic initiatives in production; 69% of agentic decisions human-verified <span style="color: #94a3b8;">(industry 2025–26)</span></p>
+                        </div>
                     </div>
                 </div>
                 
                 <div style="margin-top: 2rem; height: 1rem;"></div>
+                <aside class="notes">
+                    Traditional AIOps operates in what I call read-only mode. It's powerful at detecting anomalies and generating alerts—but it stops there. The human is always the final executor. Look at the two workflows. The red one: Ingest, Detect, Alert, Recommend—then the human executes. The green one: Ingest, Reason, Plan, Execute with guardrails, and Learn. Notice the feedback loop. Agentic AIOps doesn't just observe and recommend; it reasons, plans, executes, and learns. The human role shifts from executor to supervisor. This isn't just better automation—it's a new paradigm where AI becomes a true operational teammate. How many of you use AI tools that only give recommendations, versus tools that actually take actions? [Pause.] That distinction will become critical. Let me show you how this works under the hood.
+                </aside>
             </section>
 
             <!-- Slide 5: Technical Architecture -->
@@ -692,7 +708,7 @@
                     <div style="flex: 1.2; text-align: left; overflow-y: auto;">
                         <div style="margin-bottom: 0.6rem; padding: 0.3rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
                             <p style="font-size: 0.6em; margin: 0;">5-layer architecture enables AI to see, think, plan, act, and learn like senior SRE</p>
-                            <p style="color: #94a3b8; font-size: 0.55em; margin: 0.1rem 0 0 0;">(IEEE Software Engineering AI Agent Standards 2025)</p>
+                            <p style="color: #94a3b8; font-size: 0.55em; margin: 0.1rem 0 0 0;">(e.g. IEEE 3119-2025, P3833; industry architecture patterns)</p>
                         </div>
                         
                         <div style="margin-bottom: 0.6rem;">
@@ -703,7 +719,7 @@
                             
                             <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(147, 51, 234, 0.1); border-radius: 4px;">
                                 <h3 style="font-size: 0.6em; margin-bottom: 0.1rem;">2. Reasoning Engine</h3>
-                                <p style="font-size: 0.55em; margin: 0;">LLM + Knowledge Graph for context-aware decision making</p>
+                                <p style="font-size: 0.55em; margin: 0;">LLM + Knowledge Graph; Chain-of-Thought reasoning; RAG over runbooks</p>
                             </div>
                             
                             <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(34, 197, 94, 0.1); border-radius: 4px;">
@@ -729,6 +745,9 @@
                         
                     </div>
                 </div>
+                <aside class="notes">
+                    To understand agentic AIOps, you need to see the architecture. This isn't a single algorithm—it's a system with five distinct layers. One: Perception. Multi-modal telemetry isn't just CPU metrics; it's logs, traces, user sentiment, even support tickets. The agent sees everything. Two: Reasoning. This is where the magic happens. The LLM correlates signals across the stack, queries knowledge graphs and runbooks, and moves from correlation to causation. Three: Planning. The agent creates multi-step plans with verification, rollback procedures, and risk assessments. Four: Action. API integrations with cloud, Kubernetes, CI/CD—but with guardrails and human-in-the-loop. Five: Learning. Every action is logged, every outcome analyzed; the system gets smarter over time. This is grounded in real-world tech: Prometheus, vector databases, Kubernetes. Who has built LLM-powered operational tools? [Show of hands.] Who wants to see this in action? Let me walk through a real scenario.
+                </aside>
             </section>
 
             <!-- Slide 6: Real-World Implementation -->
@@ -753,7 +772,7 @@
                         
                         <div style="padding: 0.2rem; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border: 1px solid #22c55e;">
                             <h4 style="color: #22c55e; margin-bottom: 0.1rem; font-size: 0.7em;">Safety Metrics</h4>
-                            <p style="font-size: 0.6em; margin: 0;">95% accuracy | 3% false positive | 100% human approval for production changes</p>
+                            <p style="font-size: 0.6em; margin: 0;">Example targets: 95% accuracy | 3% false positive | 100% human approval for production changes</p>
                         </div>
                     </div>
                     <div class="stat-box">
@@ -776,6 +795,9 @@
                         </div>
                     </div>
                 </div>
+                <aside class="notes">
+                    Imagine it's 2 AM and you're getting alerts about API latency spikes. Who trusts their current monitoring to auto-fix this? [Show of hands.] Here's how an agentic system handles it. First, multi-signal correlation: the agent doesn't just see high latency. It correlates logs—connection pool exhaustion—metrics—memory pressure—and traces showing a recent deployment. It forms a hypothesis: the new deployment is causing memory leaks, leading to pool exhaustion. It creates a plan: scale the connection pool, restart affected pods, monitor the fix. For high-risk actions it requires human approval via Slack or Teams. Then it executes, verifies, and logs everything for learning. Traditional approach: two-plus hours of manual investigation. Agentic approach: three minutes from detection to resolution. The goal isn't to remove humans—it's to handle routine issues automatically and escalate the complex ones. Now let's see how the major cloud providers are approaching this.
+                </aside>
             </section>
 
             <!-- Slide 7: Cloud Provider Arms Race -->
@@ -787,7 +809,7 @@
                     <div>
                         <h3 style="color: #ff9900; font-size: 0.9em; margin-bottom: 0.2rem;">AWS</h3>
                         <ul style="font-size: 0.7em; margin: 0;">
-                            <li><strong>Amazon Q Developer</strong> - Natural language infrastructure management</li>
+                            <li><strong>Amazon Q Developer</strong> - Natural language infrastructure; <strong>Cloud Control API MCP Server</strong> (1,200+ resources)</li>
                             <li><strong>Agentic AI on Bedrock</strong> - Foundation services for custom agents</li>
                             <li><strong>DevOps Guru & CodeGuru</strong> - ML-powered operational insights</li>
                         </ul>
@@ -795,15 +817,15 @@
                     <div>
                         <h3 style="color: #0078d4; font-size: 0.9em; margin-bottom: 0.2rem;">Azure</h3>
                         <ul style="font-size: 0.7em; margin: 0;">
-                            <li><strong>GitHub Copilot (Agent Mode)</strong> - Autonomous coding & PRs</li>
-                            <li><strong>Azure SRE Agent</strong> - Autonomous incident response</li>
+                            <li><strong>GitHub Copilot for Azure</strong> - GA with Agent Mode (June 2025)</li>
+                            <li><strong>Azure SRE Agent</strong> - Autonomous incident response (Build 2025)</li>
                             <li><strong>GitHub Advanced Security</strong> - ML vulnerability scanning</li>
                         </ul>
                     </div>
                     <div>
                         <h3 style="color: #4285f4; font-size: 0.9em; margin-bottom: 0.2rem;">Google Cloud</h3>
                         <ul style="font-size: 0.7em; margin: 0;">
-                            <li><strong>Vertex AI Agent Builder</strong> - Unified agent development workbench</li>
+                            <li><strong>Vertex AI Agent Builder</strong> - Unified workbench; 88% early adopters report positive ROI</li>
                             <li><strong>AI-Orchestrated CI/CD</strong> - Adaptive pipeline automation</li>
                             <li><strong>Cloud AI Platform</strong> - Enterprise integration services</li>
                         </ul>
@@ -815,6 +837,10 @@
                     <img src="diagrams/slide7.png" alt="Cloud Provider Strategy: AWS, Azure, GCP" style="max-width: 45%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
                 </div> -->
                 
+                <div style="margin-top: 0.4rem; padding: 0.4rem; background: rgba(59, 130, 246, 0.1); border-radius: 6px; border: 1px solid #3b82f6;">
+                    <h4 style="color: #3b82f6; margin-bottom: 0.2rem; font-size: 0.7em;">Also in play — executable for DevOps teams:</h4>
+                    <p style="font-size: 0.6em; margin: 0;"><strong>GitLab Duo Agent Platform (GA Jan 2026):</strong> Planner Agent, Security Analyst Agent; Agentic Flows run asynchronously (e.g. resolve vulnerability + open MR without human waiting). <strong>Qovery Agentic DevOps Copilot:</strong> Infrastructure-specific agents; 4-phase maturity (Basic → Agentic → Resilience → Memory). <span style="color: #94a3b8;">(GitLab, Qovery 2025–26)</span></p>
+                </div>
                 <div style="margin-top: 0.4rem; padding: 0.4rem; background: rgba(124, 58, 237, 0.1); border-radius: 6px; border: 1px solid rgba(124, 58, 237, 0.3);">
                     <h4 style="color: #8b5cf6; margin-bottom: 0.2rem; font-size: 0.7em;">Selection Strategy:</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.2rem; font-size: 0.6em;">
@@ -824,17 +850,166 @@
                     </div>
                     <p style="margin: 0.2rem 0 0 0; font-size: 0.6em; text-align: center; color: #8b5cf6;"><strong>Reality:</strong> 85% multi-cloud orchestration required</p>
                 </div>
-                
-
+                <aside class="notes">
+                    This isn't a niche trend—and it's not future tense. Agents are here now. The three major cloud providers are building their 2026 strategies around agentic AI. Amazon Q and the Cloud Control API MCP Server let you manage infrastructure in natural language. GitHub Copilot for Azure is GA with Agent Mode; Azure SRE Agent provides always-on incident response. Google's Vertex AI Agent Builder is a unified workbench for custom agents. And we're seeing executable options for DevOps teams: GitLab's Duo Agent Platform went GA in January 2026—Planner Agent, Security Analyst Agent, and Agentic Flows that run in the background, for example resolving a vulnerability and opening a merge request without the human waiting. Qovery's Agentic DevOps Copilot is infrastructure-specific with a clear four-phase maturity model. So this is current reality, not a forecast. Your cloud strategy needs to align. Let me show you the latest from open source and the DevOps toolchain.
+                </aside>
             </section>
 
-            <!-- Slide 8: Quantified Business Impact -->
+            <!-- Slide 8: Ecosystem Update – New Entrants & Open Source -->
+            <section data-background="linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)" class="diagram-slide">
+                <h1 style="font-size: 1.5em; margin-bottom: 0.4rem;">Ecosystem Update: New Entrants & Open Source</h1>
+                <h3 style="font-size: 0.95em; margin-bottom: 0.6rem;">Recent DevOps AI launches (2025) — sources verified</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.5rem; text-align: left;">
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="color: #22c55e; font-size: 0.85em; margin-bottom: 0.25rem;">Kagent (CNCF Sandbox)</h3>
+                        <p style="font-size: 0.6em; margin: 0;">First open-source agentic AI framework for Kubernetes. Solo.io → CNCF (May 2025). MCP-style tools for K8s, Prometheus, Istio, Argo. Plan–execute–analyze over multi-step ops. 100+ contributors, 1,000+ GitHub stars in 100 days.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">CNCF Blog, Solo.io, GlobeNewswire (Mar–May 2025)</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="color: #0db7ed; font-size: 0.85em; margin-bottom: 0.25rem;">Docker AI Agent (Gordon)</h3>
+                        <p style="font-size: 0.6em; margin: 0;">Beta Feb 2025. Context-aware assistant in Docker Desktop & CLI: Dockerfile authoring, troubleshooting, image vulns, migration to Hardened Images. RAG over Docker docs; user control and review.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">Docker Blog, Docker Docs (Feb 2025)</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="color: #8b5cf6; font-size: 0.85em; margin-bottom: 0.25rem;">Model Context Protocol (MCP)</h3>
+                        <p style="font-size: 0.6em; margin: 0;">Open standard (“USB-C for AI”): tools, prompts, resources for AI↔systems. AWS Cloud Control, Opsera, GitHub MCP registry. 7,190+ GitHub stars, 320 contributors; spec Nov 2025.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">modelcontextprotocol.io, Anthropic, ecosystem (2025)</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="color: #f59e0b; font-size: 0.85em; margin-bottom: 0.25rem;">Opsera Hummingbird AI</h3>
+                        <p style="font-size: 0.6em; margin: 0;">Oct 2025. AI reasoning agents for DevOps; “Insights in a Box” (Code AI usage, DORA, value). GitHub MCP integration in official registry. Natural-language “why / what / impact / ROI.” Cisco, Honeywell, Qualys, Sephora.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">Opsera Newsroom, PR Newswire (Oct 2025)</p>
+                    </div>
+                </div>
+                <div style="margin-top: 0.4rem; padding: 0.4rem; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border: 1px solid #22c55e;">
+                    <p style="font-size: 0.65em; margin: 0;"><strong>Harness AI (GA Aug 2025):</strong> “Everything after code”—testing, security, deployment, optimization. Agentic pipelines, natural-language policy-as-code, root-cause troubleshooting. Addresses ~80% of SDLC failures post-coding. <span style="color: #94a3b8;">(Harness Blog, 2025)</span></p>
+                </div>
+                <aside class="notes">
+                    Beyond the hyperscalers, the ecosystem is moving fast. Kagent is the first open-source agentic AI framework for Kubernetes—donated by Solo.io to the CNCF and accepted at Sandbox in May 2025. It uses MCP-style tools for Kubernetes, Prometheus, Istio, and Argo, with plan-execute-analyze over multi-step ops. In a hundred days it had over a thousand GitHub stars and a hundred-plus contributors. Docker shipped its AI Agent—Project Gordon—in beta in February 2025: context-aware help in Desktop and CLI for Dockerfiles, troubleshooting, and vulnerabilities, with RAG over Docker's own docs. The Model Context Protocol is becoming the USB-C for AI—AWS, Opsera, and GitHub all support it; the spec and ecosystem are actively evolving. Opsera launched Hummingbird AI in October 2025—reasoning agents for DevOps and "Insights in a Box" with GitHub MCP in the official registry; customers include Cisco and Sephora. Harness AI went GA in August with "everything after code"—agentic pipelines and natural-language policy. So the trend is clear: open standards, open-source frameworks, and every layer of the toolchain adding agentic capabilities. This isn't just custom code anymore—major platforms have shipped agentic layers. Here's the tool landscape as of 2026.
+                </aside>
+            </section>
+
+            <!-- Slide 9: The Agentic Tool Landscape (2026 Update) -->
+            <section data-background="linear-gradient(135deg, #1e293b 0%, #334155 100%)" class="diagram-slide">
+                <h1 style="font-size: 1.45em; margin-bottom: 0.35rem;">The Agentic Tool Landscape (2026 Update)</h1>
+                <h3 style="font-size: 0.9em; margin-bottom: 0.5rem;">Not just custom code — major platforms have launched agentic layers</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.5rem; text-align: left;">
+                    <div style="padding: 0.5rem; background: rgba(226, 67, 41, 0.12); border-radius: 8px; border-left: 4px solid #e24329;">
+                        <h4 style="font-size: 0.85em; margin-bottom: 0.2rem; color: #e24329;">GitLab Duo Agent Platform (GA Jan 2026)</h4>
+                        <p style="font-size: 0.6em; margin: 0;"><strong>Planner Agent</strong> — structure, prioritize, break down work. <strong>Security Analyst Agent</strong> — vulnerability triage, risk assessment, false positive ID. <strong>Agentic Flows</strong> — one or more agents combined; run asynchronously in the background (e.g. resolve a vulnerability and open an MR without human waiting). Agentic Chat across Web UI and IDEs.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">GitLab Press Release, GitLab Docs (Jan 2026)</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(34, 197, 94, 0.1); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="font-size: 0.85em; margin-bottom: 0.2rem; color: #22c55e;">Qovery Agentic DevOps Copilot</h4>
+                        <p style="font-size: 0.6em; margin: 0;">Infrastructure-specific agent. <strong>4 phases of maturity:</strong> Basic (intent-to-tool), Agentic (planning), Resilience (self-correction/retry), Memory (cross-session context). Multi-step workflows, root-cause diagnosis, natural-language infra ops. Read-only mode as default; read-write coming. Console, Slack Bot, MCP Server.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.25rem 0 0 0;">Qovery Blog, Qovery Docs (2025)</p>
+                    </div>
+                </div>
+                <div style="padding: 0.5rem; background: rgba(66, 133, 244, 0.12); border-radius: 8px; border: 1px solid rgba(66, 133, 244, 0.4);">
+                    <h4 style="font-size: 0.8em; margin-bottom: 0.2rem; color: #4285f4;">Google Agent2Agent (A2A) Protocol</h4>
+                    <p style="font-size: 0.65em; margin: 0;">Open protocol (announced Apr 2025) so agents from different vendors can talk to each other—e.g. Salesforce and Google Cloud. Capability discovery via “Agent Cards,” task-oriented communication, enterprise auth. 50+ partners (Atlassian, SAP, Salesforce, ServiceNow, Accenture, Deloitte). Enables cross-platform agent collaboration.</p>
+                    <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">Google Developers Blog, a2a.cx, google.github.io/A2A</p>
+                </div>
+                <aside class="notes">
+                    This isn't just custom code anymore. Major platforms have launched agentic layers. GitLab Duo Agent Platform went generally available in January 2026. It includes a Planner Agent—structure, prioritize, break down work—and a Security Analyst Agent that does vulnerability triage, risk assessment, and false positive identification. The differentiator is Agentic Flows: one or more agents combined to run asynchronously in the background. For example, resolving a vulnerability and opening a merge request without the human waiting. Qovery's Agentic DevOps Copilot is a strong infrastructure-specific example. They define four phases of maturity: Basic—intent-to-tool mapping; Agentic—dynamic planning; Resilience—self-correction and retry; Memory—cross-session context. That gives you a mental map of where you are versus where you need to go. Google's Agent2Agent protocol, announced in April 2025, is a push for standardization so agents from different vendors—Salesforce and Google Cloud, for instance—can interoperate. Over fifty technology partners are already involved. So the landscape in 2026 is platforms, not just prototypes. Next: a maturity model you can use with your team.
+                </aside>
+            </section>
+
+            <!-- Slide 10: Agentic Maturity Model (Qovery) -->
+            <section data-background="linear-gradient(135deg, #334155 0%, #475569 100%)" class="diagram-slide">
+                <h1 style="font-size: 1.4em; margin-bottom: 0.3rem;">Agentic Maturity Model</h1>
+                <h3 style="font-size: 0.9em; margin-bottom: 0.5rem;">Where you are vs. where you need to go — after Qovery</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1); min-height: 0;">
+                        <div style="font-size: 1em; font-weight: 700; color: #94a3b8; margin-bottom: 0.15rem; line-height: 1.2;">1. Basic</div>
+                        <div style="font-size: 0.75em; font-weight: 600; margin-bottom: 0.2rem; color: #e2e8f0;">Intent → Tool</div>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Simple intent-to-tool mapping, hardcoded logic. Predictable; manual tool chaining. Limited flexibility for unexpected requests.</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(59, 130, 246, 0.15); border-radius: 8px; text-align: center; border: 1px solid #3b82f6;">
+                        <div style="font-size: 1em; font-weight: 700; color: #3b82f6; margin-bottom: 0.15rem; line-height: 1.2;">2. Agentic</div>
+                        <div style="font-size: 0.75em; font-weight: 600; margin-bottom: 0.2rem; color: #e2e8f0;">Planning</div>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Dynamic planning: analyze request, sequence tool invocations autonomously. Solves unanticipated needs; exposes fragility in tool chaining and errors.</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(34, 197, 94, 0.15); border-radius: 8px; text-align: center; border: 1px solid #22c55e;">
+                        <div style="font-size: 1em; font-weight: 700; color: #22c55e; margin-bottom: 0.15rem; line-height: 1.2;">3. Resilience</div>
+                        <div style="font-size: 0.75em; font-weight: 600; margin-bottom: 0.2rem; color: #e2e8f0;">Self-Correction</div>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Retry logic, robust error handling. Retry with corrected approach; validate intermediate states; re-plan if execution fails.</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(168, 85, 247, 0.15); border-radius: 8px; text-align: center; border: 1px solid #a855f7;">
+                        <div style="font-size: 1em; font-weight: 700; color: #a855f7; margin-bottom: 0.15rem; line-height: 1.2;">4. Memory</div>
+                        <div style="font-size: 0.75em; font-weight: 600; margin-bottom: 0.2rem; color: #e2e8f0;">Cross-Session</div>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Context across multiple requests; follow-up questions; continuous learning. No longer each request in isolation.</p>
+                    </div>
+                </div>
+                <div style="padding: 0.4rem; background: rgba(251, 191, 36, 0.1); border-radius: 6px; border: 1px solid rgba(251, 191, 36, 0.3);">
+                    <p style="font-size: 0.65em; margin: 0;"><strong>Pilot tip:</strong> Start at Basic or Agentic with <strong>read-only mode</strong> as default; enable write only after guardrails and human-in-the-loop are in place. <span style="color: #94a3b8;">(Qovery: read-only default; read-write coming)</span></p>
+                </div>
+                <aside class="notes">
+                    Use this as a mental map with your team. Phase one, Basic: intent-to-tool mapping with hardcoded logic. Predictable and easy to implement, but limited flexibility. Phase two, Agentic: dynamic planning—the system analyzes the request and sequences tool invocations on its own. That lets you handle unanticipated needs, but it exposes fragility in tool chaining and error handling. Phase three, Resilience: add retry logic and robust error handling. The system retries with a corrected approach, validates intermediate states, and re-plans if execution fails. Phase four, Memory: maintain context across multiple requests so you get follow-up questions and continuous learning instead of treating every request in isolation. When you pilot, start with read-only mode as the default; only enable write after guardrails and human-in-the-loop are in place. Qovery itself ships with read-only as default and read-write coming later. That brings us to the number-one objection: security.
+                </aside>
+            </section>
+
+            <!-- Slide 11: The Security Crisis (Shadow AI) -->
+            <section data-background="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)" class="diagram-slide">
+                <h1 style="font-size: 1.45em; margin-bottom: 0.35rem;">The Security Crisis: Shadow AI & Non-Human Identities</h1>
+                <h3 style="font-size: 0.9em; margin-bottom: 0.5rem;">Addressing the #1 objection proactively</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 0.5rem; text-align: left;">
+                    <div style="padding: 0.6rem; background: rgba(239, 68, 68, 0.12); border-radius: 8px; border-left: 4px solid #ef4444;">
+                        <h4 style="font-size: 0.85em; margin-bottom: 0.25rem; color: #ef4444;">The Threat: Shadow AI</h4>
+                        <p style="font-size: 0.62em; margin: 0;">Unmanaged AI agents and identities operating outside oversight. In 2026 the risk isn’t only humans pasting secrets—it’s <strong>unmanaged agents</strong> doing “vibe coding” (rapid, unvetted AI generation) and creating <strong>infrastructure backdoors</strong>. Non-human identities (NHIs)—service accounts, workload identities, APIs, agents—already represent <strong>the majority of identities</strong> in many enterprises (e.g. 45:1–92:1 NHI-to-human in some studies). Agents autonomously initiate actions and access data with unmanaged credentials; traditional identity models break down.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">DoControl, IBM, Astrix, Hush, Token Security (2025–26)</p>
+                    </div>
+                    <div style="padding: 0.6rem; background: rgba(34, 197, 94, 0.12); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="font-size: 0.85em; margin-bottom: 0.25rem; color: #22c55e;">The Solution: Identity-Based Security</h4>
+                        <p style="font-size: 0.62em; margin: 0;"><strong>Every agent gets its own non-human identity (NHI)</strong> with strictly scoped RBAC (Role-Based Access Control). No shared or hardcoded secrets. <strong>Runtime guardrails:</strong> continuous monitoring, policy enforcement, anomaly detection. <strong>Kill switch:</strong> one-click revocation and remediation. Start agents in <strong>read-only mode</strong>; promote to write only with approval gates and audit trails. OpenID and industry frameworks (2025) outline auth and authorization for agentic systems.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">Akeyless, Hush, OpenID Foundation (2025)</p>
+                    </div>
+                </div>
+                <div style="padding: 0.4rem; background: rgba(59, 130, 246, 0.1); border-radius: 6px; border: 1px solid #3b82f6;">
+                    <p style="font-size: 0.65em; margin: 0;"><strong>Takeaway:</strong> Security isn’t a reason to avoid agentic DevOps—it’s a reason to govern it. NHI + RBAC + runtime guardrails + kill switch + read-only default = the baseline for production agents.</p>
+                </div>
+                <aside class="notes">
+                    Security is the number-one objection you'll face. Address it head-on. The threat in 2026 isn't just humans pasting secrets. It's Shadow AI—unmanaged agents and non-human identities operating outside your oversight. "Vibe coding" means rapid, unvetted AI generation that can create infrastructure backdoors. In many enterprises, non-human identities—service accounts, workload identities, APIs, autonomous agents—already represent the majority of identities; some studies cite ratios of forty-five to ninety-two NHIs per human. Agents initiate actions and access data with unmanaged credentials; traditional identity models break down. The solution is identity-based security. Every agent gets its own non-human identity with strictly scoped RBAC. No shared or hardcoded secrets. Add runtime guardrails: continuous monitoring, policy enforcement, anomaly detection. And a kill switch—one-click revocation and remediation. Start agents in read-only mode; only promote to write with approval gates and full audit trails. So security isn't a reason to avoid agentic DevOps—it's a reason to govern it. NHI plus RBAC plus runtime guardrails plus kill switch plus read-only default is the baseline for production. Now—what does the research say about where we really are?
+                </aside>
+            </section>
+
+            <!-- Slide 12: Research & Reality – Platform Engineering & Incident AI -->
+            <section data-background="linear-gradient(135deg, #334155 0%, #475569 50%, #64748b 100%)" class="diagram-slide">
+                <h1 style="font-size: 1.5em; margin-bottom: 0.4rem;">Research & Reality: Platform Engineering & Incident AI</h1>
+                <h3 style="font-size: 0.95em; margin-bottom: 0.6rem;">2025 surveys and research — adoption, gaps, and frontiers</h3>
+                
+                <div class="stats-grid" style="grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.5rem;">
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <h4 style="font-size: 0.8em; margin-bottom: 0.2rem; color: #3b82f6;">State of AI in Platform Engineering 2025</h4>
+                        <p style="font-size: 0.6em; margin: 0;">88% use AI daily (code gen 75%, docs 71%). 73% say AI is central to org goals; 90% expect it to transform their future. But: 59% report skill gaps; 56% worried about hallucinations; “implementation plateau” between experiments and measurable ROI.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">Platform Engineering.org, Weave Intelligence, Vultr (204 respondents)</p>
+                    </div>
+                    <div style="padding: 0.5rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border-left: 4px solid #22c55e;">
+                        <h4 style="font-size: 0.8em; margin-bottom: 0.2rem; color: #22c55e;">Incident Management & SRE</h4>
+                        <p style="font-size: 0.6em; margin: 0;">79% of teams exploring AI for incident trending (Atlassian 2025, 500+ respondents). 74% cite security as barrier to expanding AI. Research: multi-agent LLM systems (e.g. STRATUS) 1.5× prior SRE agents; IBM LLM-assisted anomaly detection—500+ users, 200K+ API calls/year.</p>
+                        <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">Atlassian, IBM Research, arxiv (2025)</p>
+                    </div>
+                </div>
+                <div style="padding: 0.5rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; border: 1px solid rgba(251, 191, 36, 0.3);">
+                    <h4 style="font-size: 0.75em; margin-bottom: 0.2rem; color: #fbbf24;">Takeaway</h4>
+                    <p style="font-size: 0.65em; margin: 0;">Adoption is mainstream; impact is still ahead. Platform engineers as “architects of enterprise AI.” Continuous AI (GitHub) and agentic CI handle judgment-heavy tasks rules can’t. Human oversight and security remain non-negotiable.</p>
+                </div>
+                <aside class="notes">
+                    What does the research actually say? The State of AI in Platform Engineering 2025—from Platform Engineering.org and Weave Intelligence—surveyed over two hundred platform engineers. Eighty-eight percent use AI daily, mostly for code generation and documentation. Seventy-three percent say AI is central to organizational goals; ninety percent expect it to transform their future. But there's a gap: fifty-nine percent report skill gaps blocking faster adoption; fifty-six percent are worried about hallucinations eroding trust. The report talks about an "implementation plateau"—lots of experiments, not yet enough measurable organizational ROI. So adoption is mainstream; turning that into impact is the next frontier. On incident management, Atlassian's 2025 State of AI Incident Management report found seventy-nine percent of teams are already exploring AI for incident trending—but seventy-four percent still cite security as a top barrier to expanding use. In research, multi-agent LLM systems like STRATUS are showing around one point five times the performance of prior SRE agents; IBM's LLM-assisted anomaly detection is in production with hundreds of users. The takeaway: platform engineers are being called the new architects of enterprise AI. Continuous AI and agentic CI are handling the judgment-heavy work that rules can't. But human oversight and security remain non-negotiable. Now let's look at the quantified business impact.
+                </aside>
+            </section>
+
+            <!-- Slide 13: Quantified Business Impact -->
             <section data-background="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)">
                 <h1 style="font-size: 1.6em; margin-bottom: 0.3rem;">Quantified Business Impact</h1>
                 
                 <div class="subtitle" style="margin-bottom: 0.4rem;">
                     <h3 style="font-size: 1.0em; margin-bottom: 0.2rem;">Metrics from Real Implementations</h3>
-                    <p style="color: #94a3b8; font-size: 0.7em;">Source: Forrester Total Economic Impact Study of AI-Powered DevOps 2025</p>
+                    <p style="color: #94a3b8; font-size: 0.7em;">Sources: Forrester Wave DevOps Platforms Q2 2025; industry impact benchmarks</p>
                 </div>
                 
                 <div class="metrics-grid" style="gap: 0.3rem; margin-bottom: 0.4rem;">
@@ -864,13 +1039,19 @@
                     </div>
                 </div>
                 
+                <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border: 1px solid #22c55e;">
+                    <p style="font-size: 0.6em; margin: 0;">Embedding agents into workflows (vs bolt-on): <strong>30–50% faster processes</strong>, up to <strong>40%</strong> reduction in low-value work <span style="color: #94a3b8;">(BCG research cited by Dynatrace, 2026)</span>. Industry benchmarks: <strong>50% faster</strong> processing of operational inquiries; up to <strong>80%</strong> toil reduction in resolution workflows where agents are used end-to-end.</p>
+                </div>
                 <div class="challenge" style="padding: 0.3rem;">
                     <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">CHALLENGE: Calculate potential savings for your team.</h3>
-                    <p style="font-size: 0.6em;">What's 80% MTTR improvement worth to your organization?</p>
+                    <p style="font-size: 0.6em;">What's 80% MTTR improvement or 50% faster inquiry resolution worth to your organization?</p>
                 </div>
+                <aside class="notes">
+                    These aren't theoretical benefits. Organizations implementing agentic DevOps are seeing step-change improvements. The metrics on the slide—forty-five percent reduction in deployment lead times, fifty percent fewer incidents, eighty percent faster MTTR, and so on—are consistent with Forrester's work on DevOps platforms and industry benchmarks. Embedding agents into workflows, rather than bolting them on, is what drives results: BCG research cited by Dynatrace shows thirty to fifty percent faster processes and up to forty percent reduction in low-value work. Industry benchmarks also point to fifty percent faster processing of operational inquiries and up to eighty percent toil reduction where agents are used end-to-end. Challenge the room: what would eighty percent MTTR improvement or fifty percent faster inquiry resolution be worth to your organization? Let me show you one of the most advanced implementations in production.
+                </aside>
             </section>
 
-            <!-- Slide 9: Case Study Spotlight -->
+            <!-- Slide 14: Case Study Spotlight -->
             <section data-background="linear-gradient(135deg, #334155 0%, #475569 100%)">
                 <h1 style="font-size: 1.2em; margin-bottom: 0.3rem;">Case Study: Thomson Reuters - GitHub Copilot at Enterprise Scale</h1>
                 
@@ -914,17 +1095,20 @@
                 </div>
                 
                 <div class="implementation-context" style="padding: 0.2rem; margin-bottom: 0.1rem;">
-                    <p style="font-size: 0.6em;"><strong>Implementation Context:</strong> <span style="color: #3b82f6; font-weight: bold;">7-week</span> structured pilot across <span style="color: #22c55e; font-weight: bold;">15</span> development teams | Measured productivity using GitHub Analytics and developer surveys</p>
-                    <p style="font-size: 0.6em;"><strong>Source:</strong> GitHub Universe 2025: Thomson Reuters Implementation <span style="color: #94a3b8;">(GitHub Inc., 2025)</span></p>
+                    <p style="font-size: 0.6em;"><strong>Implementation Context:</strong> <span style="color: #3b82f6; font-weight: bold;">7-week</span> pilot with <span style="color: #22c55e; font-weight: bold;">100+</span> engineers → scaled to <span style="color: #fbbf24; font-weight: bold;">2,000+</span> developer seats | GitHub Analytics & surveys | 68% positive UX</p>
+                    <p style="font-size: 0.6em;"><strong>Source:</strong> GitHub Universe 2025 / Thomson Reuters AI adoption <span style="color: #94a3b8;">(GitHub Inc., 2025)</span></p>
                 </div>
                 
                 <div class="key-insight" style="padding: 0.2rem;">
                     <h3 style="font-size: 0.7em; margin-bottom: 0.1rem;">Key Insight:</h3>
                     <p style="font-size: 0.6em;">Engineers initially skeptical became strongest advocates - AI coding assistance is now mandatory for all new projects</p>
                 </div>
+                <aside class="notes">
+                    Thomson Reuters is a compelling example at enterprise scale. They ran a structured seven-week pilot with over a hundred engineers—agent-assisted code review and automated testing—measured with GitHub Analytics and surveys. Results: forty-six percent faster task completion, thirty-nine percent improvement in code quality, forty-five percent faster PR velocity, and two point three million in annual productivity savings. They scaled to over two thousand developer seats. What's most impressive isn't just the metrics—it's the cultural shift. Engineers who were initially skeptical became the strongest advocates. AI coding assistance is now mandatory for all new projects at Thomson Reuters. How many of your developers use AI coding assistants? [Pause.] How many would make it mandatory for new projects? [Pause.] That's the question we all need to answer. Now—how do you get started?
+                </aside>
             </section>
 
-            <!-- Slide 10: Your 90-Day Roadmap -->
+            <!-- Slide 15: Your 90-Day Roadmap -->
             <section data-background="linear-gradient(135deg, #1e293b 0%, #334155 100%)" class="side-by-side-layout">
                 <h1 style="font-size: 1.4em; margin-bottom: 0.3rem; text-align: center;">Your 90-Day Roadmap to Agentic Operations</h1>
                 <!-- <p style="font-size: 0.7em; color: #94a3b8; margin-bottom: 0.4rem; text-align: center;">90-day implementation methodology | Resource requirement analysis</p> -->
@@ -937,6 +1121,7 @@
                         <ul style="text-align: left; font-size: 0.7em; margin-bottom: 0.5rem;">
                             <li>Identify top 3 operational bottlenecks</li>
                             <li>Establish AI Governance Council</li>
+                            <li>Define runtime controls: agent IDs, audit trails, human override</li>
                             <li>Select low-risk, high-impact pilot</li>
                         </ul>
                         <div style="padding: 0.4rem; background: rgba(59, 130, 246, 0.1); border-radius: 6px; border: 1px solid #3b82f6; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
@@ -954,8 +1139,8 @@
                         <h4 style="font-size: 0.9em; margin-bottom: 0.3rem;">Pilot & Learn</h4>
                         <ul style="text-align: left; font-size: 0.7em; margin-bottom: 0.5rem;">
                             <li>Deploy AI coding assistant to pilot team</li>
-                            <li>Implement Agentic AIOps in read-only mode</li>
-                            <li>Train team on prompt engineering</li>
+                            <li>Implement Agentic AIOps in <strong>read-only mode</strong> (default); add runtime guardrails</li>
+                            <li>Train team on prompt engineering and AI supervision</li>
                         </ul>
                         <div style="padding: 0.4rem; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border: 1px solid #22c55e; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
                             <div>
@@ -994,9 +1179,12 @@
                     <h4 style="color: #fbbf24; margin-bottom: 1rem;">COMMITMENT CHECK: Who will start Phase 1 assessment within 30 days? <strong>[Show of hands]</strong></h4>
                     <p style="margin: 0; font-size: 0.9rem; text-align: center;">Who wants the detailed implementation checklist?</p>
                 </div>
+                <aside class="notes">
+                    Moving to agentic operations takes a deliberate, structured approach. Here's a proven ninety-day roadmap. Days one to thirty: Assess and govern. Start with data—identify your top three operational bottlenecks. Establish an AI Governance Council; that cross-functional group defines your rules of engagement for AI agents, including runtime controls like agent IDs and audit trails. Days thirty-one to sixty: Pilot and learn. Deploy an AI coding assistant to a pilot team. Run Agentic AIOps in read-only mode first. Invest in training—prompt engineering and AI supervision are new skills. Days sixty-one to ninety: Automate and expand. Enable your first execution-ready agent with strict human-in-the-loop. Analyze results and build a data-driven business case. Start small, measure impact, build on what works. Developer productivity tools often show fast ROI and build momentum. Commitment check: who will start Phase 1 within thirty days? [Show of hands.] Who wants the detailed checklist? As we conclude, here are the insights that should guide your strategy.
+                </aside>
             </section>
 
-            <!-- Slide 11: Key Takeaways -->
+            <!-- Slide 16: Key Takeaways -->
             <section data-background="linear-gradient(135deg, #0f172a 0%, #1e293b 100%)" class="side-by-side-layout">
                 <h1 style="font-size: 1.6em; margin-bottom: 0.5rem; text-align: center;">Key Takeaways</h1>
                 
@@ -1011,12 +1199,12 @@
                             
                             <div style="padding: 0.4rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px;">
                                 <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">2. Govern Before You Automate</h3>
-                                <p style="font-size: 0.6em; margin: 0;">Building a framework for trust and accountability is a prerequisite for autonomous systems</p>
+                                <p style="font-size: 0.6em; margin: 0;">Governance includes runtime controls (agent IDs, audit trails, human override), not just policy. Trust and accountability are prerequisites.</p>
                             </div>
                             
                             <div style="padding: 0.4rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px;">
-                                <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">3. Platform Engineering is the Vehicle</h3>
-                                <p style="font-size: 0.6em; margin: 0;">AI agents are the engine, but a well-architected IDP delivers this capability</p>
+                                <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">3. Platform Engineering is the Governance Layer</h3>
+                                <p style="font-size: 0.6em; margin: 0;">Agents are the engine; the IDP defines the <strong>Golden Paths</strong> agents are allowed to walk—making autonomy scalable and governed</p>
                             </div>
                             
                             <div style="padding: 0.4rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px;">
@@ -1040,21 +1228,23 @@
                             
                             <div style="padding: 0.4rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px;">
                                 <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">6. Safety First</h3>
-                                <p style="font-size: 0.6em; margin: 0;">Autonomous doesn't mean unsupervised - human-in-the-loop governance is non-negotiable for production systems</p>
+                                <p style="font-size: 0.6em; margin: 0;">Autonomous doesn't mean unsupervised. Runtime guardrails, human-in-the-loop, and a kill switch are non-negotiable. Start every agentic pilot in <strong>read-only mode</strong>; enable write only after guardrails and audit trails are in place.</p>
                             </div>
                             
                             <div style="padding: 0.4rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px;">
                                 <h3 style="font-size: 0.8em; margin-bottom: 0.1rem;">7. The Multi-Agent Future</h3>
-                                <p style="font-size: 0.6em; margin: 0;">By 2026, specialized AI agents will collaborate - Code-Gen Agent → Security-Scan Agent → Deploy Agent → Monitor Agent. Start building this ecosystem now.</p>
-                                <small style="font-size: 0.5em; color: #94a3b8;">Sources: MIT Technology Review (2025) | Nature Machine Intelligence (2025)</small>
+                                <p style="font-size: 0.6em; margin: 0;">By 2026, specialized agents collaborate: Code-Gen → Security-Scan → Deploy → Monitor. Ecosystems already combine AWS Kiro, GitHub Copilot, ServiceNow Assist, Azure SRE Agent. Start building now.</p>
+                                <small style="font-size: 0.5em; color: #94a3b8;">MIT Technology Review (2025) | Nature Machine Intelligence (2025) | Dynatrace (2026)</small>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+                <aside class="notes">
+                    Seven takeaways. One: Autonomy is the new automation. We're moving from automating tasks to building autonomous systems—from read-only recommendations to execution-ready agents. Two: Govern before you automate. Governance isn't an afterthought; it's a prerequisite. That includes runtime controls—agent IDs, audit trails, human override. Three: Platform engineering is the enabler. AI agents are the intelligence; the Internal Developer Platform is what makes them practical at scale. Four: The cloud providers are all-in. AWS, Azure, and Google are building their futures around agentic AI; your strategy must align. Five: Start now. Audit bottlenecks this week, establish a governance council in thirty days, select a pilot by month-end. Six: Safety first. Autonomous doesn't mean unsupervised; human-in-the-loop is non-negotiable. Seven: The multi-agent future. By 2026, specialized agents will collaborate—Code-Gen, Security-Scan, Deploy, Monitor. Ecosystems are already forming. The organizations that will excel are those that integrate AI into culture, process, and technology. The future of DevOps is autonomous—and the time to start building it is now.
+                </aside>
             </section>
 
-            <!-- Slide 12: Thank You & Connect -->
+            <!-- Slide 17: Thank You & Connect -->
             <section data-background="linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)" class="side-by-side-layout">
                 <h1 style="font-size: 1.8em; margin-bottom: 1rem; text-align: center;">Thank You</h1>
                 
@@ -1088,6 +1278,9 @@
                 <div style="margin-top: 1.5rem; text-align: center; padding-bottom: 2rem;">
                     <p style="font-size: 0.9em; color: #94a3b8; margin: 0;">Questions? Let's discuss how to implement agentic operations in your organization.</p>
                 </div>
+                <aside class="notes">
+                    Thank you for your attention. The future of DevOps is autonomous, and your competitive advantage depends on how quickly you start. I'd love to connect—scan the QR code for LinkedIn, or reach out to discuss how to implement agentic operations in your organization. Thanks again for your time.
+                </aside>
             </section>
 
             <!-- Reference Page -->
@@ -1095,9 +1288,15 @@
                 <h1>References</h1>
                 
                 <div style="text-align: left; max-width: 1000px; margin: 0 auto; font-size: 0.8rem; line-height: 1.4;">
+                    <p><strong>Atlassian. (2025).</strong> 2025 State of AI Incident Management Report. Atlassian.</p>
+                    
+                    <p><strong>CNCF. (2025).</strong> Kagent: Bringing Agentic AI to Cloud Native. Cloud Native Computing Foundation Blog.</p>
+                    
                     <p><strong>CNCF. (2025).</strong> Annual Survey 2025. Cloud Native Computing Foundation.</p>
                     
                     <p><strong>Datadog. (2025).</strong> State of Monitoring 2025. Datadog Inc.</p>
+                    
+                    <p><strong>Docker. (2025).</strong> Introducing Beta Launch of Docker AI Agent (Gordon). Docker Blog.</p>
                     
                     <p><strong>DevOps Institute. (2025).</strong> State of DevOps Cognitive Analysis Report 2025. DevOps Institute.</p>
                     
@@ -1111,7 +1310,7 @@
                     
                     <p><strong>Fortune 500 Study. (2025).</strong> Internal Fortune 500 Implementation Study 2025. Fortune 500 Research Group.</p>
                     
-                    <p><strong>Forrester. (2025).</strong> Total Economic Impact Study of AI-Powered DevOps 2025. Forrester Research.</p>
+                    <p><strong>Forrester. (2025).</strong> Lessons Learned About AI From The Forrester Wave: DevOps Platforms, Q2 2025. Forrester Research.</p>
                     
                     <p><strong>Forrester. (2025).</strong> Cloud AI Strategy Report Q4 2025. Forrester Research.</p>
                     
@@ -1119,7 +1318,17 @@
                     
                     <p><strong>Gartner. (2025).</strong> Hype Cycle for AI in Software Engineering 2025. Gartner Inc.</p>
                     
+                    <p><strong>GitLab. (2026).</strong> GitLab Duo Agent Platform General Availability. GitLab Press Release, GitLab Docs (Jan 2026).</p>
+                    
                     <p><strong>GitHub. (2025).</strong> GitHub Universe 2025: Thomson Reuters Implementation. GitHub Inc.</p>
+                    
+                    <p><strong>Google. (2025).</strong> Agent2Agent (A2A) Protocol. Google Developers Blog; a2a.cx; google.github.io/A2A.</p>
+                    
+                    <p><strong>Harness. (2025).</strong> Harness AI: AI for Every Stage of the SDLC. Harness.io Blog.</p>
+                    
+                    <p><strong>IBM Research. (2025).</strong> LLM-Assisted Anomaly Detection for SRE. IBM.</p>
+                    
+                    <p><strong>Model Context Protocol. (2025).</strong> Specification and Ecosystem. modelcontextprotocol.io.</p>
                     
                     <p><strong>GitLab. (2025).</strong> DevSecOps Survey 2025. GitLab Inc.</p>
                     
@@ -1131,7 +1340,19 @@
                     
                     <p><strong>Nature Machine Intelligence. (2025).</strong> Responsible AI in Production Systems. Nature Machine Intelligence, 7(3), 245-267.</p>
                     
+                    <p><strong>OpenID Foundation. (2025).</strong> Identity Management for Agentic AI (Whitepaper). OpenID Foundation.</p>
+                    
+                    <p><strong>Opsera. (2025).</strong> Hummingbird AI Reasoning Agents and GitHub MCP Integration. Opsera Newsroom.</p>
+                    
+                    <p><strong>Qovery. (2025).</strong> Agentic DevOps Copilot; Maturity Phases. Qovery Blog, Qovery Docs.</p>
+                    
                     <p><strong>PagerDuty. (2025).</strong> Annual Report 2025. PagerDuty Inc.</p>
+                    
+                    <p><strong>Platform Engineering.org. (2025).</strong> State of AI in Platform Engineering 2025. Platform Engineering.org / Weave Intelligence.</p>
+                    
+                    <p><strong>Security / NHI. (2025–26).</strong> Shadow AI, Non-Human Identities, Identity-Based Security. Astrix Security, Hush, Token Security, Akeyless; arxiv 2510.25819.</p>
+                    
+                    <p><strong>Solo.io. (2025).</strong> Kagent: Agentic AI Framework for Kubernetes. Solo.io Blog; CNCF Sandbox.</p>
                     
                     <p><strong>Sweller, J., Ayres, P., & Kalyuga, S. (2025).</strong> Cognitive Load Theory Applied to DevOps. ACM Computing Surveys, 58(2), 1-35.</p>
                     
