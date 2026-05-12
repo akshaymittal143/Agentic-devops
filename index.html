@@ -695,7 +695,19 @@
                     <p style="margin: 0; font-size: 0.72rem; color: #ef4444;"><strong>Disclaimer:</strong> All content shared represents my personal research and professional interests. This presentation is not affiliated with or endorsed by PayPal or any other organization.</p>
                 </div>
                 <aside class="notes">
-                    Good morning—and thanks for carving out forty minutes here at InnoTech. I'm Akshay Mittal; I'm on the Member of Technical Staff track in Software Engineering at PayPal, and I have a doctorate. Quick housekeeping: what's on screen is my own research lens and opinions—not speaking for PayPal or anyone else I work with. [Pause.] The session title on the agenda is what we're doing: agentic DevOps in the autonomous cloud, with application modernization in mind—that lines up with the conference theme you're seeing on slide one. I'll start with something interactive in a minute on the next slide. For now—glad you're here—let's get into why this matters for how you ship and operate software.
+                    <p>[Legend: anything in square brackets is for you only—timing, stage direction, polls meta—do not read aloud.]</p>
+                    <p>[~1 min. Target 25–30 min through Thank You. Skip References live unless asked.]</p>
+                    <p>Hi everyone—thanks for being here at InnoTech.</p>
+                    <p>I'm Akshay Mittal.</p>
+                    <p>I work as Member of Technical Staff in software engineering at PayPal, and I have a Ph.D.</p>
+                    <p>[Pause.]</p>
+                    <p>Quick disclaimer: this deck is my personal research and opinions—not PayPal speaking, and not an official company position.</p>
+                    <p>Here's the thread for the next half hour.</p>
+                    <p>Agentic DevOps means AI that doesn't only suggest—it can take bounded actions in your pipelines and operations.</p>
+                    <p>The hard part isn't the demo.</p>
+                    <p>It's modernization without losing control.</p>
+                    <p>[Next slide: one quick show of hands.]</p>
+                    <p>For now—let's talk about why this actually hurts in twenty twenty-six.</p>
                 </aside>
             </section>
 
@@ -707,11 +719,11 @@
                 <div class="slide-2-waste-layout">
                     <div style="text-align: left;">
                         <p class="slide-2-hero-number">$44.5B</p>
-                        <p class="slide-2-hero-sub"><strong>Harness FinOps in Focus (2025)</strong> projects <strong>~$44.5B</strong> annual enterprise <strong>infrastructure cloud waste</strong> (~21% of spend)—pair with Flexera IaaS/PaaS waste % on chart.</p>
+                        <p class="slide-2-hero-sub"><strong>Harness cloud waste study (2025, “FinOps in Focus”)</strong> projects <strong>~$44.5B</strong> annual enterprise <strong>infrastructure cloud waste</strong> (~21% of spend)—pair with Flexera <strong>compute + platform</strong> waste % on chart.</p>
                         <p style="font-size: 0.5em; color: #94a3b8; margin: 0.5rem 0 0 0; line-height: 1.35;">Use as the <strong>attention anchor</strong>; pair with chart →</p>
                     </div>
                     <div>
-                        <p style="font-size: 0.52em; color: #fca5a5; margin: 0 0 0.25rem 0.1rem; font-weight: 600; letter-spacing: 0.04em;">ESTIMATED WASTED IAAS/PAAS (SHAPE)</p>
+                        <p style="font-size: 0.52em; color: #fca5a5; margin: 0 0 0.25rem 0.1rem; font-weight: 600; letter-spacing: 0.04em;">ESTIMATED COMPUTE + PLATFORM WASTE (SHAPE)</p>
                         <div class="flexera-waste-chart" role="img" aria-label="Schematic bar trend 2020 to 2026, waste share declining then rising in 2026">
                             <div class="bar-col"><div class="bar" style="height: 86px; background: linear-gradient(180deg,#64748b,#475569);"></div><span class="yr">'20</span></div>
                             <div class="bar-col"><div class="bar" style="height: 80px; background: linear-gradient(180deg,#64748b,#475569);"></div><span class="yr">'21</span></div>
@@ -721,13 +733,13 @@
                             <div class="bar-col"><div class="bar" style="height: 58px; background: linear-gradient(180deg,#fb923c,#ea580c);"></div><span class="yr">'25 <strong style="color:#fdba74;">27%</strong></span></div>
                             <div class="bar-col"><div class="bar bar-2026" style="height: 72px; background: linear-gradient(180deg,#f97316,#dc2626);"></div><span class="yr">'26 <strong style="color:#fed7aa;">29%</strong></span></div>
                         </div>
-                        <p style="font-size: 0.45em; color: #94a3b8; margin: 0.35rem 0 0 0; line-height: 1.35; text-align: left;">Bars <strong>2020–24</strong>: schematic downward era (Flexera: five-year decline). <strong>27%</strong> Flexera 2025 report · <strong>29%</strong> Flexera <strong>2026</strong> (N=753): first rise—GenAI + new services. Not to-scale year-by-year.</p>
+                        <p style="font-size: 0.45em; color: #94a3b8; margin: 0.35rem 0 0 0; line-height: 1.35; text-align: left;">Bars <strong>2020–24</strong>: schematic downward era (Flexera: five-year decline). <strong>27%</strong> Flexera 2025 report · <strong>29%</strong> Flexera <strong>2026</strong> (N=753): first rise—<strong>new AI workloads</strong> + new services. Not to-scale year-by-year.</p>
                     </div>
                 </div>
 
                 <div class="slide-2-signal-strip">
                     <span><strong style="color:#fbbf24;">73%</strong> hybrid estates <em>(Flexera State of the Cloud '26)</em></span>
-                    <span><strong style="color:#fbbf24;">230+</strong> CNCF projects <em>(CNCF Annual Report '25)</em></span>
+                    <span><strong style="color:#fbbf24;">230+</strong> cloud-native foundation projects <em>(CNCF Annual Report '25)</em></span>
                     <span><strong style="color:#fbbf24;">~7 h/wk</strong> lost to manual bottlenecks <em>(GitLab Global DevSecOps '25)</em></span>
                     <span><strong style="color:#fbbf24;">~50%</strong> saw significant DC outage <em>(3 yr, Uptime Inst. survey '25)</em></span>
                 </div>
@@ -737,9 +749,26 @@
                     <p style="margin: 0.25rem 0 0 0; font-size: 0.58em; text-align: center; color: #94a3b8;">Signals outpace human judgment · <span style="color:#93c5fd;">Alert noise &amp; on-call load still rising (DORA, vendor SRE/monitoring reports 2024–26)</span></p>
                 </div>
                 <aside class="notes">
-                    Open with the orange number—let it land. Then sweep the chart left-to-right: twenty-twenty through twenty-four are a schematic shape only; the labeled twenty-seven and twenty-nine are what you can cite from Flexera. Fresh line for twenty twenty-six: twenty-nine percent wasted IaaS and PaaS, first uptick in five years—GenAI sprawl. [Pause.]
-                    <strong>Audience poll (not on slide):</strong> Ask for hands—who feels drowning in alerts, approvals, or tool sprawl, not lack of automation? [Pause.] Keep hands up if RCA took longer than fix in the last six months. [Pause.]
-                    Bridge: signal strip is sourced—Flexera hybrid share, CNCF project count, GitLab weekly time lost to workflow friction, Uptime outage prevalence—scaffolding for why cognition is the bottleneck. Close tight.
+                    <p>[~2 min. Let the big number land—silence beats chatter.]</p>
+                    <p>Forty-four point five billion—Harness's wasted cloud infrastructure study; the formal title on the slide is <strong>FinOps in Focus</strong>.</p>
+                    <p>It's a headline anchor, not your CFO's line item—treat it that way.</p>
+                    <p>[Point at gray bars.]</p>
+                    <p>Twenty twenty through twenty four are intentionally schematic—shape, not pixel-perfect history.</p>
+                    <p>The labels you can defend in a meeting are twenty seven percent <strong>wasted cloud compute and platform services</strong> spend—Flexera twenty twenty-five.</p>
+                    <p>Twenty nine percent in twenty twenty-six—first uptick in five years—<strong>new AI workloads spreading fast</strong>, plus new services.</p>
+                    <p>[Pause.]</p>
+                    <p>[Poll—say out loud, not on slide:]</p>
+                    <p>Hands up if your pain lately is less "we can't automate" and more alerts, approvals, or <strong>too many overlapping tools</strong>.</p>
+                    <p>[Pause.]</p>
+                    <p>Keep them up if root cause took longer than the fix in the last six months.</p>
+                    <p>[Pause.]</p>
+                    <p>The yellow strip is the punchline for engineers and managers alike.</p>
+                    <p>Hybrid is normal.</p>
+                    <p>The <strong>Cloud Native Computing Foundation</strong> numbers remind you how big the landscape is.</p>
+                    <p>GitLab's survey clocks serious weekly time lost to manual workflow.</p>
+                    <p>Uptime-style data reminds you outages still happen.</p>
+                    <p>So the bottleneck isn't bash—it's bandwidth.</p>
+                    <p>[Next slide: name the bottleneck—cognition.]</p>
                 </aside>
             </section>
 
@@ -791,14 +820,28 @@
                     </div>
                 </div>
                 <aside class="notes">
-                    Look at your picture on the slide: linear attention on our side, exponential complexity on the infrastructure side—that gap is where midnight pages and slipped SLOs come from. I'll keep the theory light: cognitive load isn't a buzzword here; it's why your best engineers burn out reviewing noise. [Optional beat: "Count your observability tabs mentally—I'll wait."] Point at the purple “declarative everything” callout—agents only behave if desired state is real, not tribal. Then land the pivot: we're not going to hire our way out; we need systems that carry context the way a staff engineer would. That sets up the next slide—what changes when those systems can act, not just chat.
+                    <p>[~1.5 min. Gesture at the diagram—human curve vs complexity curve.]</p>
+                    <p>Your brain didn't get a major version bump in the last decade.</p>
+                    <p>Kubernetes did.</p>
+                    <p>Microservices did.</p>
+                    <p>AI did.</p>
+                    <p>That gap is where pages happen and SLOs slip.</p>
+                    <p>[Optional joke—say only if room feels warm:]</p>
+                    <p>Count your observability tabs in your head—I'll wait.</p>
+                    <p>[Purple callout:]</p>
+                    <p>Declarative everything isn't vendor poetry.</p>
+                    <p>It's Terraform, manifests, policy-as-code, golden paths—machine-readable truth.</p>
+                    <p>If desired state is tribal knowledge, autonomy has nothing to reconcile against.</p>
+                    <p>You won't hire your way out of this curve.</p>
+                    <p>You need systems that carry context like a staff engineer.</p>
+                    <p>[Next slide: what changes when those systems can act—not just chat.]</p>
                 </aside>
             </section>
 
             <!-- Slide 4: The Paradigm Shift -->
             <section data-background="linear-gradient(135deg, #1e293b 0%, #334155 100%)" class="side-by-side-layout">
                 <h1 style="text-align: center; margin-bottom: 0.5rem; font-size: 1.8em;">From Read-Only to Execution-Ready AI</h1>
-                <p style="font-size: 0.7em; color: #94a3b8; margin-bottom: 0.5rem; text-align: center;">Traditional vs. Agentic paradigm shift (Gartner, 2025) | Read-only to execution-ready adoption (McKinsey, 2025)</p>
+                <p style="font-size: 0.7em; color: #94a3b8; margin-bottom: 0.5rem; text-align: center;">Traditional vs. agentic shift (Gartner, 2025) | Read-only to execution-ready adoption (McKinsey, 2025)</p>
                 
                 <div style="display: flex; gap: 1.5rem; align-items: flex-start; min-height: 60vh;">
                     <!-- Left side - Diagram -->
@@ -840,7 +883,20 @@
                 
                 <div style="margin-top: 2rem; height: 1rem;"></div>
                 <aside class="notes">
-                    Red versus green workflow on slide is intentional. Traditional AIOps still leaves the human holding the screwdriver—we get a nicer Slack message, same outcome. Agentic stacks still need supervision, but they're built to loop: observe, reason, execute with guardrails, remember. Adoption stats on the slide are messy on purpose—we're mid-transition. Pause and ask who's still one-hundred-percent "recommendation only" versus who's let an agent touch a sandbox or staging controller. Acknowledge both—you're not behind; you're calibrated. Transition: that shift only works if the architecture underneath is honest—we'll unwrap the layers next.
+                    <p>[~1.5 min. Tap red box, then green.]</p>
+                    <p>Red is the world many of us still live in: great alerts, same human holding the screwdriver.</p>
+                    <p>Green is the shift: observe, reason, plan, execute with guardrails, learn.</p>
+                    <p>You don't disappear—you move up a layer.</p>
+                    <p>You become the approver, the auditor, the escalation path.</p>
+                    <p>[Call out the blue adoption line.]</p>
+                    <p>Those percentages are illustrative ranges—surveys disagree—say that so the architects in the room don't torch you in Q and A.</p>
+                    <p>[Poll:]</p>
+                    <p>Who's still recommendation-only?</p>
+                    <p>[Pause.]</p>
+                    <p>Who's let an agent touch sandbox or staging with guardrails?</p>
+                    <p>[Pause.]</p>
+                    <p>Both answers are normal—this is a transition, not a scoreboard.</p>
+                    <p>[Next slide: five-layer architecture—keep it tight.]</p>
                 </aside>
             </section>
 
@@ -864,12 +920,12 @@
                         <div style="margin-bottom: 0.6rem;">
                             <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(59, 130, 246, 0.1); border-radius: 4px;">
                                 <h3 style="font-size: 0.6em; margin-bottom: 0.1rem;">1. Perception Layer</h3>
-                                <p style="font-size: 0.55em; margin: 0;">Multi-modal telemetry (logs, metrics, traces, user sentiment)</p>
+                                <p style="font-size: 0.55em; margin: 0;">Signals from logs, metrics, traces, and user sentiment</p>
                             </div>
                             
                             <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(147, 51, 234, 0.1); border-radius: 4px;">
                                 <h3 style="font-size: 0.6em; margin-bottom: 0.1rem;">2. Reasoning Engine</h3>
-                                <p style="font-size: 0.55em; margin: 0;">LLM + Knowledge Graph; Chain-of-Thought reasoning; RAG over runbooks</p>
+                                <p style="font-size: 0.55em; margin: 0;">LLM + knowledge graph; step-by-step reasoning; doc search over runbooks</p>
                             </div>
                             
                             <div style="margin-bottom: 0.3rem; padding: 0.3rem; background: rgba(34, 197, 94, 0.1); border-radius: 4px;">
@@ -890,13 +946,26 @@
                         
                         <div style="margin-bottom: 0.4rem; padding: 0.2rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
                             <h3 style="font-size: 0.55em; margin-bottom: 0.1rem;">Production Implementation:</h3>
-                            <p style="font-size: 0.5em; margin: 0;">Prometheus + OpenTelemetry | Vector DBs (e.g. Pinecone/Weaviate) | K8s operators | RAG at scale <span style="color:#94a3b8;">(embedding counts/accuracy—deployment-specific; cite your own evals)</span></p>
+                            <p style="font-size: 0.5em; margin: 0;">Prometheus + OpenTelemetry | Vector databases (e.g. Pinecone/Weaviate) | Kubernetes operators | semantic search at scale <span style="color:#94a3b8;">(embedding counts/accuracy—deployment-specific; cite your own evals)</span></p>
                         </div>
                         
                     </div>
                 </div>
                 <aside class="notes">
-                    To understand agentic AIOps, you need to see the architecture. This isn't a single algorithm—it's a system with five distinct layers. One: Perception. Multi-modal telemetry isn't just CPU metrics; it's logs, traces, user sentiment, even support tickets. The agent sees everything. Two: Reasoning. This is where the magic happens. The LLM correlates signals across the stack, queries knowledge graphs and runbooks, and moves from correlation to causation. Three: Planning. The agent creates multi-step plans with verification, rollback procedures, and risk assessments. Four: Action. API integrations with cloud, Kubernetes, CI/CD—but with guardrails and human-in-the-loop. Five: Learning. Every action is logged, every outcome analyzed; the system gets smarter over time. This is grounded in real-world tech: Prometheus, vector databases, Kubernetes. Who has built LLM-powered operational tools? [Show of hands.] Who wants to see this in action? Let me walk through a real scenario.
+                    <p>[~2 min. Use the diagram as spine—do not read every bullet.]</p>
+                    <p>Five layers—not one magic model.</p>
+                    <p>Perceive broadly: logs, metrics, traces, tickets—not just CPU graphs.</p>
+                    <p>Reason with LLM plus graph and runbooks—chase causation, not vibes.</p>
+                    <p>Plan with verification steps and rollback paths.</p>
+                    <p>Act through bounded APIs into cloud and Kubernetes—with rate limits and humans in the loop.</p>
+                    <p>Learn from outcomes so the same outage doesn't graduate with honors every quarter.</p>
+                    <p>[If standards question comes up:]</p>
+                    <p>P3833 on the slide is draft direction for agent frameworks.</p>
+                    <p>IEEE 3119 is about procurement risk when buying AI—not a diagram of your runtime stack.</p>
+                    <p>[Optional hands:]</p>
+                    <p>Who's shipped LLM ops beyond a Slack chatbot?</p>
+                    <p>[Pause.]</p>
+                    <p>[Next slide: latency scenario—keep it concrete.]</p>
                 </aside>
             </section>
 
@@ -946,7 +1015,14 @@
                     </div>
                 </div>
                 <aside class="notes">
-                    Two-A-M story on purpose—every SRE in the room has a version. Walk through sense–hypothesize–plan–human gate–execute–verify without reading bullet by bullet. Emphasize the safety row: we're not aiming for zero humans; we're aiming for fewer heroics. If someone looks skeptical—agree—you should be; trust is earned in shadow mode first. Bridging sentence: hyperscalers are betting the farm that this becomes normal—let's name names.
+                    <p>[About a minute and a half. This is the late-night incident slide—if you see SREs nodding, you're in the right register.]</p>
+                    <p>Everyone in this room has lived some version of this: an API goes slow, the graph looks guilty, and you're still piecing the story together at two in the morning.</p>
+                    <p>Walk it once with your finger on the diagram, not every bullet. You're telling a story: pull in logs, metrics, and traces together; let the system propose what might actually be wrong; draft a fix plan; a human signs off on anything that could hurt production; then you run it and prove it worked.</p>
+                    <p>The time boxes on the right are illustrative. Your shop might never hit three minutes, or you might beat it in staging—say that plainly so nobody treats it like a benchmark audit.</p>
+                    <p>The point underneath is what matters: the boring, well-understood path is what you automate first. The weird edge cases and the low-confidence guesses still go to a human.</p>
+                    <p>The safety strip isn't there to sound virtuous. We're not trying to remove people from the loop; we're trying to remove heroics and untrusted changes from the loop.</p>
+                    <p>If someone laughs at "three minutes," agree with them. That kind of trust comes from shadow mode, read-only runs, and receipts—not from a slide.</p>
+                    <p>[Next slide: cloud provider arms race—keep it a quick map, not a product catalog.]</p>
                 </aside>
             </section>
 
@@ -1001,7 +1077,16 @@
                     <p style="margin: 0.2rem 0 0 0; font-size: 0.6em; text-align: center; color: #8b5cf6;"><strong>Reality:</strong> 85% multi-cloud orchestration required · See also Microsoft’s <strong>Agentic DevOps</strong> practice framing (principles &amp; strategic direction, 2025–26)</p>
                 </div>
                 <aside class="notes">
-                    This slide is deliberately dense—treat it as a market map, not a memorization test. One sentence each cloud: AWS wants natural language on top of control planes; Microsoft is shipping agents where you already live—GitHub and Azure; GCP leans unified builder for bespoke agents. Then land GitLab Duo and Qovery—two ways "platform" vendors are executable, not slideware. Invite the room silently to pick which logo matches forty percent of their spend—that's usually the pilot beachhead—then admit most of us are hybrid anyway.
+                    <p>[~2 min. Dense slide—market map, not flashcards.]</p>
+                    <p>AWS: natural language meets enormous control planes.</p>
+                    <p>Azure: agents where many of you already live—GitHub and Azure.</p>
+                    <p>Google: unified builder story for bespoke agents—and yes, check Google's own ROI wording before you quote the eighty eight percent line verbatim.</p>
+                    <p>[Blue box:]</p>
+                    <p>GitLab Duo and the Qovery platform aren't science fiction—they're "your DevOps vendor shipped <strong>automation you can actually run</strong>."</p>
+                    <p>[If running long—skip purple grid.]</p>
+                    <p>Pilot where spend and pain already live.</p>
+                    <p>Hybrid isn't shame—it's physics.</p>
+                    <p>[Next slide: open source and glue—credibility for the builders.]</p>
                 </aside>
             </section>
 
@@ -1012,13 +1097,13 @@
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-bottom: 0.35rem; text-align: left;">
                     <div style="padding: 0.35rem 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                        <h3 style="color: #22c55e; font-size: 0.8em; margin: 0 0 0.2rem 0;">Kagent (CNCF Sandbox)</h3>
-                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">First open-source agentic AI for K8s. Solo.io → CNCF (May 2025). MCP-style tools: K8s, Prometheus, Istio, Argo. 100+ contributors, 1,000+ stars in 100 days.</p>
+                        <h3 style="color: #22c55e; font-size: 0.8em; margin: 0 0 0.2rem 0;">Kagent (Cloud Native Foundation sandbox)</h3>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">First open-source agentic AI for K8s. Solo.io → foundation sandbox (May 2025). MCP-style tools: K8s, Prometheus, Istio, Argo. 100+ contributors, 1,000+ stars in 100 days.</p>
                         <p style="font-size: 0.5em; color: #94a3b8; margin: 0.15rem 0 0 0;">CNCF Blog, Solo.io, GlobeNewswire</p>
                     </div>
                     <div style="padding: 0.35rem 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">
                         <h3 style="color: #0db7ed; font-size: 0.8em; margin: 0 0 0.2rem 0;">Docker AI Agent (Gordon)</h3>
-                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Beta Feb 2025. Desktop & CLI: Dockerfiles, troubleshooting, vulns, Hardened Images. RAG over Docker docs.</p>
+                        <p style="font-size: 0.55em; margin: 0; line-height: 1.3;">Beta Feb 2025. Desktop & CLI: Dockerfiles, troubleshooting, vulns, Hardened Images. Search-backed answers from Docker docs.</p>
                         <p style="font-size: 0.5em; color: #94a3b8; margin: 0.15rem 0 0 0;">Docker Blog, Docker Docs</p>
                     </div>
                     <div style="padding: 0.35rem 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">
@@ -1036,7 +1121,13 @@
                     <p style="font-size: 0.6em; margin: 0;"><strong>Harness AI (GA Aug 2025):</strong> “Everything after code”—testing, security, deployment, optimization; agentic pipelines, natural-language policy. ~80% SDLC failures post-coding. <span style="color: #94a3b8;">(Harness Blog, 2025)</span></p>
                 </div>
                 <aside class="notes">
-                    If you forget every logo, remember the pattern—open frameworks plus vendor agents plus MCP-shaped glue. Solo.io donating Kagent to CNCF signals "we'll meet you in kubectl land." Gordon is boring in a good way—Dockerfiles and vulns are where juniors burn hours. MCP is my pick for the bar argument: it's the USB-C metaphor that lands with execs. Opsera and Harness are proof the CD layer wants natural language policy, not just chat. Keep moving fast—this slide is table stakes for the tool sprawl slide after it.
+                    <p>[~1.5 min. One meme for the mixed room:]</p>
+                    <p>Standards and open glue beat fifty bespoke Jarvises.</p>
+                    <p>Kagent—now in the open-source cloud foundation sandbox—meets you <strong>in the cluster</strong>, where you already work.</p>
+                    <p>Gordon is boring on purpose—Dockerfiles and security patches are where junior time burns.</p>
+                    <p>MCP is the executive-friendly line: USB-C for tools—say it once, they'll repeat it in meetings.</p>
+                    <p>Harness and Opsera are the CD layer asking for policy in plain language—not another chat window.</p>
+                    <p>[If behind schedule: Kagent plus MCP only—then advance.]</p>
                 </aside>
             </section>
 
@@ -1063,7 +1154,11 @@
                     <p style="font-size: 0.55em; color: #94a3b8; margin: 0.2rem 0 0 0;">Google Developers Blog, a2a.cx, google.github.io/A2A</p>
                 </div>
                 <aside class="notes">
-                    GitLab is the "agents in the SDLC" story; Qovery is the "maturity ladder" story; A2A is the "please don't build fifty siloed Jarvises" story. If your org is Git-centric, wave at Duo; if you're platform-led, Qovery's phase language is borrowable even if you never buy the product. Google A2A gets one crisp line—fifty partners means political cover for standards geeks. Next slide turns those phases into a workshop exercise.
+                    <p>[~1.5 min. Three beats—not three sales pitches.]</p>
+                    <p>GitLab: agents living inside the SDLC loop.</p>
+                    <p>Qovery—the maturity-model vendor on the slide—borrow the vocabulary even if you never buy.</p>
+                    <p>A2A: political cover for people who want interoperability without betting the company on one vendor's dream stack.</p>
+                    <p>[Next slide: same maturity model as a five-second self-scan.]</p>
                 </aside>
             </section>
 
@@ -1098,8 +1193,17 @@
                     <p style="font-size: 0.65em; margin: 0;"><strong>Pilot tip:</strong> Start at Basic or Agentic with <strong>read-only mode</strong> as default; enable write only after guardrails and human-in-the-loop are in place. <span style="color: #94a3b8;">(Qovery: read-only default; read-write coming)</span></p>
                 </div>
                 <aside class="notes">
-                    <strong>Poll (speaker notes only):</strong> Think primary platform team—not demos. Phase 1 single-tool, 2 planning, 3 retries in practice, 4 memory across incidents—hands for 1, 2, 3, 4. [Pause.] Name-check the majority bucket—ones and twos are normal; threes, joke they're hiring.
-                    Walk the four boxes left to right like story beats, not spec sheets. Basic feels safe but caps out fast; Agentic is where demos get spicy; Resilience is where production happens; Memory is where you stop re-explaining your architecture every Monday. Pivot: nothing here works if security freaks—you're obliged to preempt that; next slide does.
+                    <p>[~1.5 min. Ladder story—left to right.]</p>
+                    <p>Basic: safe, predictable, runs out of runway.</p>
+                    <p>Agentic: where demos get spicy and toolchains break loudly.</p>
+                    <p>Resilience: retries, replans, reality.</p>
+                    <p>Memory: you stop re-explaining your architecture every Monday standup.</p>
+                    <p>[Poll—say aloud:]</p>
+                    <p>Think your real platform team—not a vendor demo—which phase are you most days—one, two, three, or four?</p>
+                    <p>[Pause.]</p>
+                    <p>[If mostly ones and twos: normalize it. If many threes: light joke—they're hiring.]</p>
+                    <p>Yellow box once: read-only default, human gates, then write.</p>
+                    <p>[Next slide: security—earn the room before optimism.]</p>
                 </aside>
             </section>
 
@@ -1124,7 +1228,18 @@
                     <p style="font-size: 0.65em; margin: 0;"><strong>Takeaway:</strong> Security isn’t a reason to avoid agentic DevOps—it’s a reason to govern it. NHI + RBAC + runtime guardrails + kill switch + read-only default = the baseline for production agents.</p>
                 </div>
                 <aside class="notes">
-                    You will get iced out of the security review if you hand-wave this slide. Tone: empathic CFO, pragmatic CISO. Shadow AI isn't "employees are naughty"—it's shadow because procurement never met the workload identity. Tie NHI ratios to mundane pain—credential sprawl, shared service accounts—which security already hates. Sell the fix as identity hygiene they already preach: scoped NHIs, break-glass revocation, audits. If someone mutters hallucinations—agree—that's why read-only pilots exist. Bridging sentence: skeptics cite surveys too—next slide stacks research next to hype.
+                    <p>[~2 min. Tone: pragmatic CISO ally, not cheerleader.]</p>
+                    <p>Shadow AI isn't "people are reckless."</p>
+                    <p>It's workloads and agents showing up without owners, budgets, or reviews.</p>
+                    <p><strong>Machine identities</strong>—service accounts, bots, API keys—are boring until they're the blast radius: shared tokens, <strong>accounts multiplying out of control</strong>, agents acting with mystery credentials.</p>
+                    <p>[Green column—plain English:]</p>
+                    <p>Scoped identities.</p>
+                    <p>Role-based access—who can do what—that fits reality.</p>
+                    <p>Runtime guardrails.</p>
+                    <p>A kill switch that actually works in a drill—not only on a slide.</p>
+                    <p>Read-only first—promote to write with approvals and audit.</p>
+                    <p>If someone yells hallucinations—agree—that's why pilots start read-only.</p>
+                    <p>[Next slide: surveys—pair hype with this discipline.]</p>
                 </aside>
             </section>
 
@@ -1158,7 +1273,16 @@
                     <p style="font-size: 0.65em; margin: 0;">Adoption is mainstream; durable ROI needs <strong>QE + governance + golden paths</strong>. Platform engineers as “architects of enterprise AI.” Continuous AI (GitHub) and agentic CI handle judgment-heavy tasks rules can’t. Human oversight and security remain non-negotiable.</p>
                 </div>
                 <aside class="notes">
-                    Two columns—purple is "excited practitioner," green is "still-hard SRE truths." Name-check the new pink strip: Tricentis-style agentic QE is the above-the-fold vendor story for “who pays the Quality Tax on purpose.” Indigo strip: if someone wants rigor, arXiv two-six-zero-five is your “authority transfer” citation. Translate percentages into feelings: eighty-eight daily AI use means your platform team is experimenting; plateau means CFOs yawning in QBRs. Atlassian seventy-nine trending means incident teams are bored of timelines and want summaries—sell that as low-risk NLP. Seventy-four security barrier—you nod, you don't argue; you offer controls from the prior slide. Close with humility: adoption is loud, durable ROI is still a craft. Next slide is where we let numbers feel concrete—before a case study you can Google.
+                    <p>[~2 min. Two-column trick: left is optimism, right is friction—mixed audiences need both.]</p>
+                    <p>Platform teams live in the left column daily—AI in the loop is normal now.</p>
+                    <p>The right column is the grown-up footnote—security still gates expansion.</p>
+                    <p>Say the quiet part: many shops are past novelty and stuck in an implementation plateau—pretty demos, fuzzy ROI.</p>
+                    <p>[Pink strip—one breath:]</p>
+                    <p>Agentic quality engineering is how tests and risk signals keep up when Copilot-class tools ship diffs faster than humans can read them.</p>
+                    <p>[Indigo strip—for the engineer who wants citations:]</p>
+                    <p>For the citation crowd: there's a twenty twenty-six open archive paper on <strong>who's allowed to change the pipeline</strong>—authority hand-off in CI/CD—not vibes. The ID is on the slide if they want to look it up.</p>
+                    <p>[If short on time: read only yellow takeaway box.]</p>
+                    <p>[Next slide: numbers—say "directional" three times.]</p>
                 </aside>
             </section>
 
@@ -1210,8 +1334,15 @@
                     <p style="font-size: 0.6em;">What's 80% MTTR improvement or 50% faster inquiry resolution worth to your organization?</p>
                 </div>
                 <aside class="notes">
-                    <strong>Poll (notes only):</strong> Hands if teams ship Copilot-class assistance faster than review, testing, or SRE capacity upgraded—no guilt, just signal. [Pause.]
-                    Frame the green numbers as directional—your mileage varies with domain and discipline. Pair them immediately with the red "Quality Tax" strip: speed without test and identity investment shows up as incident debt. Forbes/Cortex line is shorthand for CFO conversations—defer nitpicking to Q&amp;A if someone wants study design. Pivot: Thomson Reuters is the "at scale" morality play after the abstract uplift.
+                    <p>[~1.5 min. Open with red strip.]</p>
+                    <p>Quality tax is the receipt for moving fast without buying down risk.</p>
+                    <p>Those percentages are directional—say that twice—industry signals, not your KPI contract.</p>
+                    <p>Green tiles are a composite mood board—order of magnitude, not a promise for your org chart.</p>
+                    <p>[Poll:]</p>
+                    <p>Hands if AI assistance is moving faster than your review, test, or SRE capacity.</p>
+                    <p>[Pause.]</p>
+                    <p>That's the wedge where incident debt shows up next quarter.</p>
+                    <p>[Next slide: Thomson Reuters—name makes the abstract numbers feel human.]</p>
                 </aside>
             </section>
 
@@ -1268,7 +1399,13 @@
                     <p style="font-size: 0.6em;">Engineers initially skeptical became strongest advocates - AI coding assistance is now mandatory for all new projects</p>
                 </div>
                 <aside class="notes">
-                    Thomson Reuters reads well on a marquee—ten thousand engineers, seven-week disciplined pilot. Hit four metrics, then the cultural punchline: skeptics became advocates when measurement was adult supervision, not vibe. Their two questions on slide are fine as micro-polls if you have time trim. Tie it back gently: mandates follow evidence; you're not begging people to love Copilot, you're proposing instrumentation. Glide into ninety-day scaffolding.
+                    <p>[About a minute to ninety seconds. Lead with the name once—Thomson Reuters—then spend your time on how they ran the pilot, not on reading every number off the slide.]</p>
+                    <p>Frame it like this: more than ten thousand engineers is not a flex by itself. It's a coordination problem. The interesting part is that they didn't just flip a switch; they ran a structured seven-week pilot with over a hundred senior engineers and actually measured what happened.</p>
+                    <p>Let the big tiles do the work: faster task completion, better reported code quality, faster pull requests. You can say "mid-forties percent" if you don't want to sound like you're selling mattresses.</p>
+                    <p>The dollar savings line is real headline material, but it's also the easiest line for a skeptic to poke. If you're not ready to defend the GitHub Universe sourcing in Q and A, skip the dollar figure out loud and keep the qualitative story.</p>
+                    <p>The line I would not skip is the human one. A lot of engineers walked in skeptical. They turned into advocates when the program had grown-up measurement—analytics, surveys, a real feedback loop—not when someone said "trust the vibe."</p>
+                    <p>Close that thought in one sentence: once leadership saw evidence, Copilot-style assistance stopped being optional for new work. Evidence first, mandate second.</p>
+                    <p>[Next slide: ninety-day roadmap—tell them it's a scaffold they can steal, not a contract.]</p>
                 </aside>
             </section>
 
@@ -1330,7 +1467,17 @@
                     <p style="margin: 0; font-size: 0.8rem; text-align: center;">Who wants the detailed implementation checklist?</p>
                 </div>
                 <aside class="notes">
-                    Ninety days sounds aggressive—it's staged on purpose week one governance, thirty-to-sixty shadow read-only paths. Read the roster and budget bullets quickly; they're for people who photograph slides. The commitment check is your fourth poll if you count the roadmap—run it earnestly, not pep-rally. Offer the checklist as a QR or handout promise if you have one; if not, say "ping me on LinkedIn" to match the last slide. Jump to takeaways with energy, not relief.
+                    <p>[~2 min. Ninety days is a stunt headline—defend it as staged risk reduction.]</p>
+                    <p>Thirty days: pick pain, pick pilot, write governance that fits your culture—not a PDF museum.</p>
+                    <p>Sixty days: shadow mode, read-only agents, teach supervision—not prompt theater.</p>
+                    <p>Ninety days: one narrow execution path with receipts you can show a VP.</p>
+                    <p>[Budget and FTE micro-font: skim only—it's for photo-of-slide people.]</p>
+                    <p>[Commitment check—say sincerely, not pep rally:]</p>
+                    <p>Who will start phase one inside thirty days?</p>
+                    <p>[Pause.]</p>
+                    <p>No QR checklist?</p>
+                    <p>Say you'll follow up on LinkedIn—and actually do.</p>
+                    <p>[Next slide: seven takeaways—don't read the wall.]</p>
                 </aside>
             </section>
 
@@ -1390,7 +1537,18 @@
                     </div>
                 </div>
                 <aside class="notes">
-                    Seven bullets is a lot—don't read aloud. Hit three aloud: autonomy shift, governance first, golden paths beat hero agents. Gesture at four through seven if time is thin. Memorize takeaway six—read-only pilots plus agentic QE—because it's the applause line security and QA both need. Landing: future isn't coming; hallway conversations at this conference prove it's mid-rollout. Invite one honest question before thank-you.
+                    <p>[Roughly ninety seconds to two minutes, depending how much of the right column you use. Sound like you're closing a retro, not selling a keynote trailer.]</p>
+                    <p>There are seven bullets up here. I'm not going to read them line by line—that would put us both to sleep.</p>
+                    <p>Instead, three things I want you to carry out the door.</p>
+                    <p>First: the shift is real. We're moving from AI that whispers suggestions to AI that can actually run the play—under supervision, but execution-ready, not just chat.</p>
+                    <p>Second: none of that works without governance first. Runtime controls, identities you can audit, humans who can still say no. Policy decks alone don't cut it anymore.</p>
+                    <p>Third: platform engineering is where that becomes boring and safe. Golden paths aren't marketing—they're how you let agents move fast without turning every repo into the Wild West.</p>
+                    <p>[If you have another minute, skim the right column with your hand—don't narrate every sub-bullet.]</p>
+                    <p>Five is the homework slide: audit bottlenecks, stand up a small governance group, pick one pilot. Say it plain: start this month, not "when things calm down."</p>
+                    <p>Six is the one I want security and quality folks to hear in full. Autonomous does not mean unsupervised. Read-only pilots, real guardrails, a kill switch, and quality engineering that keeps up with how fast the machines generate change. That's the bar for production.</p>
+                    <p>Seven is optional color: we're already seeing chains of specialized agents—generate, scan, deploy, watch. If you only have one sentence left, say we're heading toward teams of narrow agents, not one god model, and leave the vendor names on the slide.</p>
+                    <p>This isn't science fiction on a five-year horizon. It's the conversations people are already having in hallways and Slack threads.</p>
+                    <p>[If the room feels open, ask one real question—then stop, thank them, and hand it back.]</p>
                 </aside>
             </section>
 
@@ -1430,7 +1588,14 @@
                     <p style="font-size: 0.65em; color: #64748b; margin: 0.75rem 0 0;">InnoTech Austin 2026 · Agentic DevOps in the Autonomous Cloud</p>
                 </div>
                 <aside class="notes">
-                    Breathe—you made it through the dense middle. Thank them for morning attention spans; joke once if the room loosened up. Reinforce inbox zero isn't the goal—a useful follow-up conversation is. If Q&amp;A happens here, duplicate the disclaimer verbally once. Invite LinkedIn scans as opt-in curiosity, not pressure.
+                    <p>[~1 min. Breathe. Smile.]</p>
+                    <p>Thank you—genuinely—for lending your attention in a busy conference day.</p>
+                    <p>[Light humor only if room energy supports it—otherwise skip.]</p>
+                    <p>Goal isn't LinkedIn inbox zero.</p>
+                    <p>It's one useful follow-up conversation with someone you met here.</p>
+                    <p>[If Q and A starts on this slide: repeat disclaimer once in plain English.]</p>
+                    <p>QR is optional—curiosity, not pressure.</p>
+                    <p>[End.]</p>
                 </aside>
             </section>
 
@@ -1515,6 +1680,11 @@
                     
                     <p><strong>Uptime Institute. (2025).</strong> Global Data Center Survey / outage analysis (verify statistic wording against Uptime PDFs).</p>
                 </div>
+                <aside class="notes">
+                    <p>[Skip this slide live in a 25–30 minute slot.]</p>
+                    <p>[If someone asks for sources—say aloud:]</p>
+                    <p>Everything on the charts traces back to primary links in this list—happy to share after the session.</p>
+                </aside>
             </section>
 
         </div>
